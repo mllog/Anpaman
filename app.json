@@ -1,7 +1,7 @@
 {
-	"name": "J.A.R.V.I.S. on Messenger",
-	"description": "Just A Rather Very Intelligent System, now on Messenger!",
-	"repository": "https://github.com/swapagarwal/JARVIS-on-Messenger",
+	"name": "Apanman",
+	"description": "A Personal Assitant Bot!",
+	"repository": "https://github.com/mllog/Anpaman",
 	"success_url": "/",
 	"env": {
 		"ACCESS_TOKEN": {
