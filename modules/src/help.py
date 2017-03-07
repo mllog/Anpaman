@@ -1,7 +1,7 @@
 from templates.text import TextTemplate
 
 def process(input, entities=None):
-    help = 'Hi there! I\'m Jarvis, your personal assistant.'
+    help = 'Hi there! I\'m Apanman, your personal assistant.'
     if entities is not None:
         if 'sender' in entities and 'first_name' in entities['sender']:
             sender_name = entities['sender']['first_name']

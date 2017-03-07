@@ -10,13 +10,13 @@ WIT_AI_ACCESS_TOKEN = os.environ.get('WIT_AI_ACCESS_TOKEN', config.WIT_AI_ACCESS
 
 def process_query(input):
     try:
-        r = requests.get('https://api.wit.ai/message?v=20160420&q=' + input, headers={
+        r = requests.get('https://api.wit.ai/message?v=20170307&q=' + input, headers={
             'Authorization': 'Bearer %s' % WIT_AI_ACCESS_TOKEN
         })
         data = r.json()
-        intent = data['outcomes'][0]['intent']
-        entities = data['outcomes'][0]['entities']
-        confidence = data['outcomes'][0]['confidence']
+        intent = data['entities']['intent'][0]['value']
+        entities = data['entities']
+        confidence = data['entities']['intent'][0]['confidence']
         if intent in src.__all__ and confidence > 0.5:
             return intent, entities
         else:
